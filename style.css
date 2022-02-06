@@ -8,6 +8,8 @@
 html, body {
     height: 100%;
     background-color: #F2D1C9;
+    margin: auto;
+    justify-content: center;
 }
 
 p{
@@ -34,6 +36,15 @@ h2{
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 
+}
+
+
+footer, header{
+    margin: auto;
+}
+
+main p, h1, h2{
+    min-width: 300px;
 }
 
 #logo{
@@ -102,14 +113,14 @@ h2{
     flex-direction: row;
     align-items: center;
     padding: 22px;
-    gap: 120px;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .conteudo-texto{
     margin: 10px;
     border-radius: 15px;
     box-shadow: 1px 2px black ;
+    width: 50vw;
 
 }
 
@@ -129,7 +140,7 @@ h2{
 .conteudo-quem-katia{
     display: flex;
     align-items: center;
-    gap: 120px;
+    justify-content: space-between;
     padding: 22px;
 }
 
@@ -137,10 +148,6 @@ h2{
     height: 500px;
     margin-left: 30px;
 }
-
-
-
-
 
 
 .conteudo-mapa{
@@ -155,12 +162,14 @@ h2{
 .conteudo-mapa article{
     padding: 22px;
     width: 700px;
+    
 }
 .conteudo-mapa p {
     background-color: #F2F2F2;
     padding: 22px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    box-shadow: 1px 2px black;
 
 }
 
@@ -176,4 +185,66 @@ h2{
 .rodape h3{
     color: #9A5947;
     font-size: 32px;
+}
+
+.rodape-redes-sociais{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+.rodape-redes-sociais div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+
+@media only screen and (min-width: 300px) and (max-width: 1000px){
+    main{
+        margin: auto;
+    }
+    
+    .conteudo-quem-kamila-img{
+        height: 400px;
+    }
+    .conteudo-quem-katia-img{
+        height: 400px;
+        width: 320px;
+        object-fit: cover;
+    }
+    h1{
+        font-size: 40px;
+    }
+    p{
+        font-size: 22px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    footer img{
+        width: 50px;
+    }
+  
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1799px){
+    main{
+        margin:auto;
+    }
+    
+    .conteudo-quem-kamila, .conteudo-quem-katia{
+        justify-content: space-around;
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    .conteudo-mapa, .conteudo-quem-kamila, .conteudo-quem-katia{
+        justify-content: space-around;
+    }
+    p{
+        font-size: 25px;
+    }
+    h1{
+        font-size: 40px;
+    }
 }
